@@ -1,0 +1,17 @@
+Index: app/src/main/java/com/revolve44/sftest3/ui/home/HomeFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.revolve44.sftest3.ui.home;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.Nullable;\r\nimport androidx.annotation.NonNull;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.lifecycle.Observer;\r\nimport androidx.lifecycle.ViewModelProviders;\r\n\r\nimport com.revolve44.sftest3.R;\r\n\r\npublic class HomeFragment extends Fragment {\r\n\r\n    private HomeViewModel homeViewModel;\r\n\r\n    public View onCreateView(@NonNull LayoutInflater inflater,\r\n                             ViewGroup container, Bundle savedInstanceState) {\r\n        homeViewModel =\r\n                ViewModelProviders.of(this).get(HomeViewModel.class);\r\n        View root = inflater.inflate(R.layout.fragment_home, container, false);\r\n        final TextView textView = root.findViewById(R.id.text_home);\r\n        homeViewModel.getText().observe(this, new Observer<String>() {\r\n            @Override\r\n            public void onChanged(@Nullable String s) {\r\n                textView.setText(s);\r\n            }\r\n        });\r\n        return root;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/revolve44/sftest3/ui/home/HomeFragment.java	(date 1577972144000)
++++ app/src/main/java/com/revolve44/sftest3/ui/home/HomeFragment.java	(date 1577973974898)
+@@ -31,5 +31,6 @@
+             }
+         });
+         return root;
++        //pizdez
+     }
+ }
+\ No newline at end of file
