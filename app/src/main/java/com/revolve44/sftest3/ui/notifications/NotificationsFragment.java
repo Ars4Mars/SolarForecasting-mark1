@@ -48,8 +48,6 @@ public class NotificationsFragment extends Fragment {
             }
         });
 
-
-
         add.setOnClickListener(new View.OnClickListener()
         {
             @Override
