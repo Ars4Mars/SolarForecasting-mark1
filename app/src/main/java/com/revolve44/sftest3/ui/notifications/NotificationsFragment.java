@@ -22,12 +22,6 @@ public class NotificationsFragment extends Fragment {
 
 
     private NotificationsViewModel notificationsViewModel;
-
-    private EditText num1;
-    private EditText num2;
-    private Button add;
-    private TextView result;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -67,13 +61,4 @@ public class NotificationsFragment extends Fragment {
         });
         return root;
     }
-//    private void answer() {
-//        int number1 = Integer.parseInt(num1.getText().toString());
-//        int number2 = Integer.parseInt(num2.getText().toString());
-//        int sum = number1 + number2;
-//        result.setText("Answer is " + sum);
-//
-//    }
-
-
 }
