@@ -30,7 +30,7 @@ public class NotificationsFragment extends Fragment {
                 ViewModelProviders.of(this).get(NotificationsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_notifications, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        final EditText num1 = root.findViewById(R.id.editText4);
+        final EditText num1 = root.findViewById(R.id.editText5);    //TODO
         final EditText num2 = root.findViewById(R.id.editText5);
         final Button add = root.findViewById(R.id.superbutton4);
         final TextView lol = root.findViewById(R.id.output);

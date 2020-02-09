@@ -40,50 +40,58 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
+                android:layout_height="291dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <EditText
-                    android:id="@+id/editText4"
-                    android:layout_width="186dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="kWh "
-                    android:inputType="number"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.892"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.488" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="57dp"
-                    android:layout_height="46dp"
-                    android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.216"
-                    app:srcCompat="@drawable/ic_memory_black_24dp" />
-
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="Your solar station power"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="-Обозначте местоположение панелей"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.841" />
+                    app:layout_constraintVertical_bias="0.066" />
+
+                <!--
+                    map:mapType="0"
+                    map:zOrderOnTop="true"
+                    map:uiRotateGestures="true"
+                    map:uiScrollGestures="true"
+                    map:uiTiltGestures="true"
+                    map:uiZoomGestures="true"
+                    map:uiZoomControls="true"
+                    map:liteMode="true"
+                    map:uiMapToolbar="true"
+                    map:ambientEnabled="true"
+                    map:cameraMinZoomPreference="0.0"
+                    map:cameraMaxZoomPreference="1.0"
+                -->
+
+
+                <Switch
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Switch"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.705"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapPanel"
+                    android:layout_width="397dp"
+                    android:layout_height="199dp"
+                    app:layout_constraintBottom_toTopOf="@+id/switch1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
